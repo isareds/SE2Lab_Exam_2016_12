@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/isareds/SE2Lab_Exam_2016_12/issues"
   },
-  "homepage": "https://github.com/isareds/SE2Lab_Exam_2016_12#readme"
+  "homepage": "https://github.com/isareds/SE2Lab_Exam_2016_12#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0"
+  }
 }
