@@ -7,6 +7,8 @@ var util = require('util');
 //Cross-Origin Resource Sharing (CORS), used for enabling pre-flight option
 cors = require('cors');
 
+var bind = require('bind');
+
 //student manager
 var studentManager = require('./studentManager.js');
 
@@ -29,8 +31,31 @@ app.get('/', function(request, response)
 	var headers = {};
 	//answer
 	headers["Content-Type"] = "text/html";
-	response.writeHead(200, headers);
-	response.end("Welcome student");
+	
+    
+    bind.toFile('./client/index.tpl',{},
+               function(data){
+        response.writeHead(200, headers);
+        response.end(data);
+    });
+    
+});
+
+/**
+ * @brief get the search by mark page
+ * @return a static page.
+ */
+app.get("/searchByMark", function(request, response){
+    var headers = {};
+	//answer
+	headers["Content-Type"] = "text/html";
+	
+    
+    bind.toFile('./client/searchByMark.tpl',{},
+               function(data){
+        response.writeHead(200, headers);
+        response.end(data);
+    });
 });
 
 /**

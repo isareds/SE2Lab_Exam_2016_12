@@ -6,17 +6,16 @@
 
 </head>
 <body>
-
+    
 	<h2>Exam client</h2>
 	<br>
-	<button id="btn1">test search</button> <br>
+	<button action="/searchStudent" id="btn1"> <a href="/searchStudent">test search</a></button> <br>
 	<button id="btn2">test deletion ID</button> <br>
 	<button id="btn3">test deletion SSN</button> <br>
 	<button id="btn4">test insertion</button> <br>
-	<button id="btn5">test search by mark  &gt;7 </button> <br>
+    <button id="btn5"><a href="/searchByMark">test search by mark  &gt;7</a></button> <br>
 	<button id="btn6">test search by mark  &lt;7 </button> <br>
-	
-
+    
 </body>
 </html>
 
