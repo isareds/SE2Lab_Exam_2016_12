@@ -135,6 +135,11 @@ var insertStudent = function insertStudent(student)
 
 //AGGIUNGERE QUI SOTTO NUOVE FUNZIONI
 
+var catchMark = function catchMark(body){
+    mark = body.split(0,0);
+    number = body.split(1,1);
+    console.log(mark + " " + number);
+} 
 
 
 //export functions
@@ -144,3 +149,4 @@ exports.deleteStudentID = deleteStudentID;
 exports.deleteStudentSSN = deleteStudentSSN; 
 exports.insertStudent = insertStudent;  
 exports.getList = getList; 
+exports.catchMark = catchMark;
