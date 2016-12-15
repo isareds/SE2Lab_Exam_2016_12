@@ -58,6 +58,37 @@ app.get("/searchByMark", function(request, response){
     });
 });
 
+app.post("/searchByMark", function(request, response){
+     var headers = {};
+	//answer
+	headers["Content-Type"] = "text/html";
+	var mark;
+    //check body and parameters
+	if ( typeof request.body !== 'undefined' && request.body)
+	{
+		if ( typeof request.body.mark !== 'undefined' && request.body.mark)
+            {
+			 mark = request.body.mark;
+            
+            }
+		else 
+            mark = "not defined";
+	
+	}
+	else
+	{
+		mark = "body undefined";
+	}
+    
+    console.log(mark);
+    bind.toFile('./client/searchByMark.tpl',{
+        mark: mark
+    },
+               function(data){
+        response.writeHead(200, headers);
+        response.end(data);
+    });
+});
 /**
  * @brief returns the list of students
  * @return a static page.

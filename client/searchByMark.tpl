@@ -5,9 +5,11 @@
     <title>searchByMark</title>
 </head>
 <body>
-    <form action="/sarchByMark">
+    <form action="/searchByMark" method="POST">
         <input type="text" name="mark" placeholder="mark">
         <input type="submit">
     </form>
+    
+    <h1>(:mark:)</h1>
 </body>
 </html>
